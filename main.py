@@ -1,18 +1,8 @@
-import cgi
-import datetime
-import logging
-import os
-
-from google.appengine.ext.webapp import template
-from google.appengine.ext import db
-from google.appengine.api import users
 from google.appengine.ext import webapp
 from google.appengine.ext.webapp.util import run_wsgi_app
-from google.appengine.api import images
 from django.utils import simplejson as json
 
 from nabazlib.Nabaztag import Nabaztag
-logging.getLogger().setLevel(logging.DEBUG)
 
 
 
