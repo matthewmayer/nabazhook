@@ -13,6 +13,7 @@ class Hook(webapp.RequestHandler):
         #get the credentials for the nazaztag 
         u = self.request.get("id")
         p = self.request.get("secret")
+        optionalreponame = self.request.get("repo")
         
         #get the JSON payload. this is stored in the POST variable "payload"
         jsonstr = self.request.get("payload")
@@ -21,7 +22,8 @@ class Hook(webapp.RequestHandler):
         obj = json.loads(jsonstr)
         
         #read out some interesting data
-        reponame = obj['repository']['name']
+        if optionalreponame=='':
+            reponame = obj['repository']['name']
         author = obj['commits'][0]['author']['name']
         msg = obj['commits'][0]['message']
         numcommits = len(obj['commits'])
