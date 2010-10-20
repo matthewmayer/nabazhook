@@ -3,3 +3,5 @@ In GitHub, go to Repository Administration, under Service Hooks>Post Receive URL
 http://nabazhook.appspot.com/?id=...&secret=... (filling in your Nabaztag's API credentials)
 
 then nabaztag will announce your git pushes :D
+
+as
